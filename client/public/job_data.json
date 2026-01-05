@@ -1,0 +1,718 @@
+{
+  "nurses": {
+    "fullTime": [
+      {
+        "id": 1,
+        "name": "LE 在宅・施設 訪問看護リハビリステーション高円寺",
+        "type": "訪問看護",
+        "salary": 450000,
+        "location": "高円寺駅徒歩5分",
+        "benefits": ["社会保険完備", "ボーナス・賞与あり", "交通費支給"],
+        "workDays": "月〜金（応相談）",
+        "workHours": "日勤のみ",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 2,
+        "name": "クリニックプラス高円寺",
+        "type": "クリニック",
+        "salary": 347000,
+        "location": "高円寺駅徒歩1分",
+        "benefits": ["社会保険完備", "年間休日120日", "ボーナス・賞与あり"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 3,
+        "name": "きらめき訪問看護リハビリステーション高円寺",
+        "type": "訪問看護",
+        "salary": 461429,
+        "location": "高円寺駅徒歩7分",
+        "benefits": ["社会保険完備", "年収550万以上可能", "ボーナス・賞与あり"],
+        "workDays": "月〜金（応相談）",
+        "workHours": "日勤のみ",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 4,
+        "name": "訪問看護ステーションささえ 荻窪営業所",
+        "type": "訪問看護",
+        "salary": 375000,
+        "location": "荻窪駅徒歩3分",
+        "benefits": ["社会保険完備", "有休消化率100%", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 5,
+        "name": "阿佐谷すずき診療所",
+        "type": "クリニック",
+        "salary": 300000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 6,
+        "name": "河北総合病院",
+        "type": "病院",
+        "salary": 280000,
+        "location": "阿佐ヶ谷駅徒歩3分",
+        "benefits": ["社会保険完備", "ボーナス・賞与あり", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 7,
+        "name": "ケア24松ノ木",
+        "type": "地域包括支援センター",
+        "salary": 320000,
+        "location": "松ノ木駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 8,
+        "name": "おうち保育園あさがや",
+        "type": "保育園",
+        "salary": 280000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:00-17:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 9,
+        "name": "すぎなみ中央訪問看護",
+        "type": "訪問看護",
+        "salary": 350000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "ボーナス・賞与あり"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 10,
+        "name": "まなびの森保育園荻窪",
+        "type": "保育園",
+        "salary": 270000,
+        "location": "荻窪駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "7:30-16:30",
+        "holiday": "土日祝日"
+      }
+    ],
+    "partTime": [
+      {
+        "id": 101,
+        "name": "訪問看護ステーション ナンナル 阿佐ヶ谷",
+        "type": "訪問看護",
+        "hourlyWage": 2000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 102,
+        "name": "おぎくぼ南口眼科",
+        "type": "眼科クリニック",
+        "hourlyWage": 1800,
+        "location": "荻窪駅周辺",
+        "benefits": ["週2-3日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 103,
+        "name": "阿佐谷すずき診療所",
+        "type": "クリニック",
+        "hourlyWage": 1900,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 104,
+        "name": "野崎クリニック訪問看護",
+        "type": "訪問看護",
+        "hourlyWage": 2000,
+        "location": "杉並区内",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 105,
+        "name": "クリニックプラス高円寺",
+        "type": "クリニック",
+        "hourlyWage": 2000,
+        "location": "高円寺駅徒歩1分",
+        "benefits": ["週2-3日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 106,
+        "name": "ケア24松ノ木",
+        "type": "地域包括支援センター",
+        "hourlyWage": 1800,
+        "location": "松ノ木駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 107,
+        "name": "すぎなみ中央訪問看護",
+        "type": "訪問看護",
+        "hourlyWage": 2100,
+        "location": "杉並区内",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 108,
+        "name": "まなびの森保育園荻窪",
+        "type": "保育園",
+        "hourlyWage": 1700,
+        "location": "荻窪駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "応相談",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 109,
+        "name": "杉並区内クリニックA",
+        "type": "クリニック",
+        "hourlyWage": 1900,
+        "location": "杉並区内",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 110,
+        "name": "杉並区内訪問看護B",
+        "type": "訪問看護",
+        "hourlyWage": 2200,
+        "location": "杉並区内",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      }
+    ]
+  },
+  "medicalOffice": {
+    "fullTime": [
+      {
+        "id": 201,
+        "name": "荻窪痛み＆リハビリクリニック",
+        "type": "クリニック",
+        "salary": 200000,
+        "location": "荻窪駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 202,
+        "name": "阿佐谷すずき診療所",
+        "type": "クリニック",
+        "salary": 190000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 203,
+        "name": "しらさわ整形外科",
+        "type": "整形外科クリニック",
+        "salary": 210000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 204,
+        "name": "メディカルスキャニング 高円寺",
+        "type": "健診センター",
+        "salary": 220000,
+        "location": "高円寺駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 205,
+        "name": "阿佐ヶ谷パール歯科",
+        "type": "歯科クリニック",
+        "salary": 200000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 206,
+        "name": "河北ファミリークリニック南阿佐谷",
+        "type": "クリニック",
+        "salary": 185000,
+        "location": "南阿佐谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 207,
+        "name": "杉並高円寺整骨院",
+        "type": "整骨院",
+        "salary": 200000,
+        "location": "高円寺駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜日",
+        "workHours": "10:00-20:00",
+        "holiday": "不定休"
+      },
+      {
+        "id": 208,
+        "name": "高円寺オズ歯科室",
+        "type": "歯科クリニック",
+        "salary": 210000,
+        "location": "高円寺駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 209,
+        "name": "南阿佐ヶ谷デンタルクリニック",
+        "type": "歯科クリニック",
+        "salary": 200000,
+        "location": "南阿佐谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 210,
+        "name": "杉並区内クリニックC",
+        "type": "クリニック",
+        "salary": 195000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      }
+    ],
+    "partTime": [
+      {
+        "id": 301,
+        "name": "エフリオ訪問看護ステーション",
+        "type": "訪問看護",
+        "hourlyWage": 1250,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 302,
+        "name": "しらさわ整形外科",
+        "type": "整形外科クリニック",
+        "hourlyWage": 1200,
+        "location": "杉並区内",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 303,
+        "name": "荻窪痛み＆リハビリクリニック",
+        "type": "クリニック",
+        "hourlyWage": 1150,
+        "location": "荻窪駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 304,
+        "name": "阿佐谷すずき診療所",
+        "type": "クリニック",
+        "hourlyWage": 1200,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 305,
+        "name": "阿佐ヶ谷パール歯科",
+        "type": "歯科クリニック",
+        "hourlyWage": 1150,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 306,
+        "name": "杉並高円寺整骨院",
+        "type": "整骨院",
+        "hourlyWage": 1120,
+        "location": "高円寺駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜日",
+        "workHours": "10:00-20:00",
+        "holiday": "不定休"
+      },
+      {
+        "id": 307,
+        "name": "高円寺オズ歯科室",
+        "type": "歯科クリニック",
+        "hourlyWage": 1200,
+        "location": "高円寺駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 308,
+        "name": "南阿佐ヶ谷デンタルクリニック",
+        "type": "歯科クリニック",
+        "hourlyWage": 1150,
+        "location": "南阿佐谷駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 309,
+        "name": "野崎クリニック訪問看護",
+        "type": "訪問看護",
+        "hourlyWage": 1200,
+        "location": "杉並区内",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 310,
+        "name": "杉並区内クリニックD",
+        "type": "クリニック",
+        "hourlyWage": 1150,
+        "location": "杉並区内",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      }
+    ]
+  },
+  "radiologist": {
+    "fullTime": [
+      {
+        "id": 401,
+        "name": "河北総合病院",
+        "type": "病院",
+        "salary": 254000,
+        "location": "阿佐ヶ谷駅徒歩3分",
+        "benefits": ["社会保険完備", "ボーナス・賞与あり", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 402,
+        "name": "かんざわ整形外科クリニック",
+        "type": "クリニック",
+        "salary": 240000,
+        "location": "南阿佐ケ谷駅徒歩1分",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:00-17:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 403,
+        "name": "杉並健診プラザ",
+        "type": "健診センター",
+        "salary": 230000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 404,
+        "name": "東高円寺COそだて・健診クリニック",
+        "type": "健診クリニック",
+        "salary": 250000,
+        "location": "東高円寺駅徒歩1分",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 405,
+        "name": "城西病院",
+        "type": "病院",
+        "salary": 240000,
+        "location": "荻窪駅周辺",
+        "benefits": ["社会保険完備", "ボーナス・賞与あり", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 406,
+        "name": "下高井戸脳神経外科クリニック",
+        "type": "クリニック",
+        "salary": 260000,
+        "location": "下高井戸駅徒歩2分",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:00-17:00",
+        "holiday": "日月祝日"
+      },
+      {
+        "id": 407,
+        "name": "杉並区内病院E",
+        "type": "病院",
+        "salary": 250000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "ボーナス・賞与あり"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 408,
+        "name": "杉並区内クリニックF",
+        "type": "クリニック",
+        "salary": 240000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 409,
+        "name": "杉並区内健診センターG",
+        "type": "健診センター",
+        "salary": 255000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 410,
+        "name": "杉並区内病院H",
+        "type": "病院",
+        "salary": 245000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "ボーナス・賞与あり"],
+        "workDays": "月〜金",
+        "workHours": "8:30-17:30",
+        "holiday": "土日祝日"
+      }
+    ],
+    "partTime": [
+      {
+        "id": 501,
+        "name": "かんざわ整形外科クリニック",
+        "type": "クリニック",
+        "hourlyWage": 2000,
+        "location": "南阿佐ケ谷駅徒歩1分",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 502,
+        "name": "しんえい内科健診クリニック",
+        "type": "健診クリニック",
+        "hourlyWage": 3000,
+        "location": "高円寺駅周辺",
+        "benefits": ["マンモ撮影必須", "週1日からOK"],
+        "workDays": "月（固定）",
+        "workHours": "午前のみ",
+        "holiday": "応相談"
+      },
+      {
+        "id": 503,
+        "name": "城西病院",
+        "type": "病院",
+        "hourlyWage": 2000,
+        "location": "荻窪駅周辺",
+        "benefits": ["週1-3日OK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 504,
+        "name": "東高円寺COそだて・健診クリニック",
+        "type": "健診クリニック",
+        "hourlyWage": 2200,
+        "location": "東高円寺駅徒歩1分",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 505,
+        "name": "下高井戸脳神経外科クリニック",
+        "type": "クリニック",
+        "hourlyWage": 2500,
+        "location": "下高井戸駅徒歩2分",
+        "benefits": ["午前のみOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "午前のみ",
+        "holiday": "応相談"
+      },
+      {
+        "id": 506,
+        "name": "杉並区内病院I",
+        "type": "病院",
+        "hourlyWage": 2000,
+        "location": "杉並区内",
+        "benefits": ["週1-3日OK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 507,
+        "name": "杉並区内クリニックJ",
+        "type": "クリニック",
+        "hourlyWage": 2100,
+        "location": "杉並区内",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 508,
+        "name": "杉並区内健診センターK",
+        "type": "健診センター",
+        "hourlyWage": 2300,
+        "location": "杉並区内",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 509,
+        "name": "杉並区内病院L",
+        "type": "病院",
+        "hourlyWage": 2000,
+        "location": "杉並区内",
+        "benefits": ["週1-3日OK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 510,
+        "name": "杉並区内クリニックM",
+        "type": "クリニック",
+        "hourlyWage": 2200,
+        "location": "杉並区内",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      }
+    ]
+  },
+  "statistics": {
+    "nurses": {
+      "fullTime": {
+        "average": 343343,
+        "max": 461429,
+        "min": 270000
+      },
+      "partTime": {
+        "average": 1940,
+        "max": 2200,
+        "min": 1700
+      }
+    },
+    "medicalOffice": {
+      "fullTime": {
+        "average": 201000,
+        "max": 220000,
+        "min": 185000
+      },
+      "partTime": {
+        "average": 1177,
+        "max": 1250,
+        "min": 1120
+      }
+    },
+    "radiologist": {
+      "fullTime": {
+        "average": 246400,
+        "max": 260000,
+        "min": 230000
+      },
+      "partTime": {
+        "average": 2230,
+        "max": 3000,
+        "min": 2000
+      }
+    }
+  }
+}
