@@ -15,7 +15,7 @@ export default function MachidaPartTime() {
   const [selectedJobType, setSelectedJobType] = useState("nurses");
 
   useEffect(() => {
-    fetch("/machida_part_time_jobs.json")
+    fetch("/machida_extended_jobs.json")
       .then((res) => res.json())
       .then((data) => setJobData(data));
   }, []);
@@ -53,9 +53,9 @@ export default function MachidaPartTime() {
       {/* ヘッダー */}
       <header className="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-12 px-4 shadow-lg">
         <div className="container max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-3">町田・相模大野 パート時給比較レポート</h1>
+          <h1 className="text-4xl font-bold mb-3">多摩地域 パート時給比較レポート</h1>
           <p className="text-lg text-teal-100">看護師・医療事務のパート時給を徹底比較</p>
-          <p className="text-sm text-teal-200 mt-2">2026年1月調査 | 町田・相模大野エリア | パート・アルバイト限定</p>
+          <p className="text-sm text-teal-200 mt-2">2026年1月調査 | 町田・相模大野・八王子・立川・日野エリア | パート・アルバイト限定</p>
         </div>
       </header>
 
