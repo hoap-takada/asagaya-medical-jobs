@@ -1,0 +1,238 @@
+{
+  "nurses": [
+    {
+      "id": 1,
+      "name": "相模大野駅前クリニック",
+      "type": "クリニック",
+      "hourlyWage": 1900,
+      "location": "相模大野駅徒歩1分",
+      "benefits": ["交通費支給", "週1日からOK", "未経験可"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 2,
+      "name": "相模大野皮膚科クリニック",
+      "type": "クリニック",
+      "hourlyWage": 1900,
+      "location": "相模大野駅周辺",
+      "benefits": ["交通費支給", "週2-3日OK"],
+      "workDays": "月〜金",
+      "workHours": "9:00-18:00",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 3,
+      "name": "相模大野病院",
+      "type": "病院",
+      "hourlyWage": 1700,
+      "location": "相模大野駅目の前",
+      "benefits": ["交通費支給", "充実の研修"],
+      "workDays": "月〜金",
+      "workHours": "8:00-17:00",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 4,
+      "name": "訪問看護ステーション相模",
+      "type": "訪問看護",
+      "hourlyWage": 2300,
+      "location": "相模大野駅周辺",
+      "benefits": ["交通費全額支給", "週1日からOK"],
+      "workDays": "応相談",
+      "workHours": "応相談",
+      "holiday": "応相談"
+    },
+    {
+      "id": 5,
+      "name": "町田駅前総合クリニック",
+      "type": "クリニック",
+      "hourlyWage": 1800,
+      "location": "町田駅徒歩2分",
+      "benefits": ["交通費支給", "週2日からOK"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 6,
+      "name": "川村クリニック",
+      "type": "クリニック",
+      "hourlyWage": 1750,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "週3日OK"],
+      "workDays": "月〜金",
+      "workHours": "9:00-18:00",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 7,
+      "name": "町田健診センター",
+      "type": "健診施設",
+      "hourlyWage": 2000,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "週1日からOK"],
+      "workDays": "月〜金",
+      "workHours": "8:00-17:00",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 8,
+      "name": "相模原市南区クリニック",
+      "type": "クリニック",
+      "hourlyWage": 1850,
+      "location": "相模大野駅周辺",
+      "benefits": ["交通費支給", "週2日からOK"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 9,
+      "name": "町田市民病院",
+      "type": "病院",
+      "hourlyWage": 1800,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "社会保険完備"],
+      "workDays": "月〜金",
+      "workHours": "8:00-17:00",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 10,
+      "name": "相模原訪問看護ステーション",
+      "type": "訪問看護",
+      "hourlyWage": 2400,
+      "location": "相模大野駅周辺",
+      "benefits": ["交通費全額支給", "週1日からOK"],
+      "workDays": "応相談",
+      "workHours": "応相談",
+      "holiday": "応相談"
+    }
+  ],
+  "medicalOffice": [
+    {
+      "id": 101,
+      "name": "おだぎりクリニック",
+      "type": "クリニック",
+      "hourlyWage": 1500,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "未経験可"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 102,
+      "name": "いのうえ内科クリニック",
+      "type": "クリニック",
+      "hourlyWage": 1400,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "週1日からOK"],
+      "workDays": "月〜金",
+      "workHours": "9:00-18:00",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 103,
+      "name": "こんどう整形外科",
+      "type": "クリニック",
+      "hourlyWage": 1550,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "経験者優遇"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 104,
+      "name": "やすおか医院",
+      "type": "クリニック",
+      "hourlyWage": 1450,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "未経験可"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 105,
+      "name": "なかの整形外科・内科",
+      "type": "クリニック",
+      "hourlyWage": 1600,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "経験者優遇"],
+      "workDays": "月〜金",
+      "workHours": "9:00-18:00",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 106,
+      "name": "南町田きたの皮フ科",
+      "type": "クリニック",
+      "hourlyWage": 1500,
+      "location": "南町田駅周辺",
+      "benefits": ["交通費支給", "未経験可"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 107,
+      "name": "たまさかい皮フ科クリニック",
+      "type": "クリニック",
+      "hourlyWage": 1550,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "週2日からOK"],
+      "workDays": "月〜金",
+      "workHours": "9:00-18:00",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 108,
+      "name": "南町田レディースクリニック",
+      "type": "クリニック",
+      "hourlyWage": 1500,
+      "location": "南町田駅周辺",
+      "benefits": ["交通費支給", "未経験可"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 109,
+      "name": "相模大野駅前医療事務センター",
+      "type": "クリニック",
+      "hourlyWage": 1700,
+      "location": "相模大野駅徒歩1分",
+      "benefits": ["交通費支給", "経験者優遇"],
+      "workDays": "月〜金",
+      "workHours": "9:00-17:30",
+      "holiday": "土日祝日"
+    },
+    {
+      "id": 110,
+      "name": "町田市民病院事務部",
+      "type": "病院",
+      "hourlyWage": 1450,
+      "location": "町田駅周辺",
+      "benefits": ["交通費支給", "社会保険完備"],
+      "workDays": "月〜金",
+      "workHours": "8:00-17:00",
+      "holiday": "土日祝日"
+    }
+  ],
+  "statistics": {
+    "nurses": {
+      "average": 1950,
+      "max": 2400,
+      "min": 1700
+    },
+    "medicalOffice": {
+      "average": 1525,
+      "max": 1700,
+      "min": 1400
+    }
+  }
+}
