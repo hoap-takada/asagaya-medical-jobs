@@ -1,0 +1,278 @@
+{
+  "nurses": {
+    "fullTime": [
+      {
+        "id": 2,
+        "name": "クリニックプラス高円寺",
+        "type": "クリニック",
+        "salary": 347000,
+        "location": "高円寺駅徒歩1分",
+        "benefits": ["社会保険完備", "年間休日120日", "ボーナス・賞与あり"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 5,
+        "name": "阿佐谷すずき診療所",
+        "type": "クリニック",
+        "salary": 300000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      }
+    ],
+    "partTime": [
+      {
+        "id": 103,
+        "name": "阿佐谷すずき診療所",
+        "type": "クリニック",
+        "hourlyWage": 1900,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 105,
+        "name": "クリニックプラス高円寺",
+        "type": "クリニック",
+        "hourlyWage": 2000,
+        "location": "高円寺駅徒歩1分",
+        "benefits": ["週2-3日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      }
+    ]
+  },
+  "medicalOffice": {
+    "fullTime": [
+      {
+        "id": 201,
+        "name": "荻窪痛み＆リハビリクリニック",
+        "type": "クリニック",
+        "salary": 200000,
+        "location": "荻窪駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 202,
+        "name": "阿佐谷すずき診療所",
+        "type": "クリニック",
+        "salary": 190000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 203,
+        "name": "しらさわ整形外科",
+        "type": "整形外科クリニック",
+        "salary": 210000,
+        "location": "杉並区内",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 205,
+        "name": "阿佐ヶ谷パール歯科",
+        "type": "歯科クリニック",
+        "salary": 200000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 208,
+        "name": "高円寺オズ歯科室",
+        "type": "歯科クリニック",
+        "salary": 210000,
+        "location": "高円寺駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 209,
+        "name": "南阿佐ヶ谷デンタルクリニック",
+        "type": "歯科クリニック",
+        "salary": 200000,
+        "location": "南阿佐谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      }
+    ],
+    "partTime": [
+      {
+        "id": 302,
+        "name": "しらさわ整形外科",
+        "type": "整形外科クリニック",
+        "hourlyWage": 1200,
+        "location": "杉並区内",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 303,
+        "name": "荻窪痛み＆リハビリクリニック",
+        "type": "クリニック",
+        "hourlyWage": 1150,
+        "location": "荻窪駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 304,
+        "name": "阿佐谷すずき診療所",
+        "type": "クリニック",
+        "hourlyWage": 1200,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 305,
+        "name": "阿佐ヶ谷パール歯科",
+        "type": "歯科クリニック",
+        "hourlyWage": 1150,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 307,
+        "name": "高円寺オズ歯科室",
+        "type": "歯科クリニック",
+        "hourlyWage": 1200,
+        "location": "高円寺駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 308,
+        "name": "南阿佐ヶ谷デンタルクリニック",
+        "type": "歯科クリニック",
+        "hourlyWage": 1150,
+        "location": "南阿佐谷駅周辺",
+        "benefits": ["週1-2日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      }
+    ]
+  },
+  "radiologist": {
+    "fullTime": [
+      {
+        "id": 402,
+        "name": "かんざわ整形外科クリニック",
+        "type": "クリニック",
+        "salary": 240000,
+        "location": "南阿佐ケ谷駅徒歩1分",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:00-17:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 406,
+        "name": "下高井戸脳神経外科クリニック",
+        "type": "クリニック",
+        "salary": 260000,
+        "location": "下高井戸駅徒歩2分",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "8:00-17:00",
+        "holiday": "日月祝日"
+      }
+    ],
+    "partTime": [
+      {
+        "id": 501,
+        "name": "かんざわ整形外科クリニック",
+        "type": "クリニック",
+        "hourlyWage": 2000,
+        "location": "南阿佐ケ谷駅徒歩1分",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 505,
+        "name": "下高井戸脳神経外科クリニック",
+        "type": "クリニック",
+        "hourlyWage": 2500,
+        "location": "下高井戸駅徒歩2分",
+        "benefits": ["午前のみOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "午前のみ",
+        "holiday": "応相談"
+      }
+    ]
+  },
+  "statistics": {
+    "nurses": {
+      "fullTime": {
+        "average": 323500,
+        "max": 347000,
+        "min": 300000
+      },
+      "partTime": {
+        "average": 1950,
+        "max": 2000,
+        "min": 1900
+      }
+    },
+    "medicalOffice": {
+      "fullTime": {
+        "average": 201667,
+        "max": 210000,
+        "min": 190000
+      },
+      "partTime": {
+        "average": 1183,
+        "max": 1250,
+        "min": 1150
+      }
+    },
+    "radiologist": {
+      "fullTime": {
+        "average": 250000,
+        "max": 260000,
+        "min": 240000
+      },
+      "partTime": {
+        "average": 2250,
+        "max": 2500,
+        "min": 2000
+      }
+    }
+  }
+}

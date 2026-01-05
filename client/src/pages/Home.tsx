@@ -27,7 +27,7 @@ export default function Home() {
   const [selectedEmploymentType, setSelectedEmploymentType] = useState("fullTime");
 
   useEffect(() => {
-    fetch("/job_data.json")
+    fetch("/clinic_job_data.json")
       .then((res) => res.json())
       .then((data) => setJobData(data));
   }, []);
@@ -72,9 +72,9 @@ export default function Home() {
       {/* ヘッダー */}
       <header className="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-12 px-4 shadow-lg">
         <div className="container max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-3">阿佐ヶ谷 医療職求人比較レポート</h1>
-          <p className="text-lg text-teal-100">看護師、医療事務、放射線技師の求人条件を徹底比較</p>
-          <p className="text-sm text-teal-200 mt-2">2026年1月調査 | 阿佐ヶ谷エリア</p>
+          <h1 className="text-4xl font-bold mb-3">阿佐ヶ谷 クリニック医療職求人比較レポート</h1>
+          <p className="text-lg text-teal-100">クリニック限定 | 看護師、医療事務、放射線技師の求人条件を徹底比較</p>
+          <p className="text-sm text-teal-200 mt-2">2026年1月調査 | 阿佐ヶ谷エリア | 医療事務は歯科クリニックを含む</p>
         </div>
       </header>
 
