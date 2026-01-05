@@ -22,6 +22,94 @@
         "workDays": "月〜金",
         "workHours": "9:00-18:00",
         "holiday": "土日祝日"
+      },
+      {
+        "id": 6,
+        "name": "阿佐ヶ谷内科クリニック",
+        "type": "クリニック",
+        "salary": 320000,
+        "location": "阿佐ヶ谷駅徒歩3分",
+        "benefits": ["社会保険完備", "交通費支給", "研修制度あり"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 7,
+        "name": "高円寺皮膚科",
+        "type": "クリニック",
+        "salary": 310000,
+        "location": "高円寺駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 8,
+        "name": "南阿佐ヶ谷整形外科",
+        "type": "クリニック",
+        "salary": 305000,
+        "location": "南阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 9,
+        "name": "永福町クリニック",
+        "type": "クリニック",
+        "salary": 315000,
+        "location": "永福町駅周辺",
+        "benefits": ["社会保険完備", "交通費支給", "ボーナスあり"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 10,
+        "name": "浜田山医院",
+        "type": "クリニック",
+        "salary": 325000,
+        "location": "浜田山駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 11,
+        "name": "阿佐ヶ谷東クリニック",
+        "type": "クリニック",
+        "salary": 318000,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 12,
+        "name": "下高井戸クリニック",
+        "type": "クリニック",
+        "salary": 312000,
+        "location": "下高井戸駅周辺",
+        "benefits": ["社会保険完備", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 13,
+        "name": "荻窪医療クリニック",
+        "type": "クリニック",
+        "salary": 330000,
+        "location": "荻窪駅周辺",
+        "benefits": ["社会保険完備", "交通費支給", "ボーナスあり"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
       }
     ],
     "partTime": [
@@ -46,6 +134,94 @@
         "workDays": "月〜金",
         "workHours": "9:00-17:30",
         "holiday": "土日祝日"
+      },
+      {
+        "id": 106,
+        "name": "阿佐ヶ谷内科クリニック",
+        "type": "クリニック",
+        "hourlyWage": 1850,
+        "location": "阿佐ヶ谷駅徒歩3分",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 107,
+        "name": "高円寺皮膚科",
+        "type": "クリニック",
+        "hourlyWage": 1950,
+        "location": "高円寺駅周辺",
+        "benefits": ["週2日からOK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 108,
+        "name": "南阿佐ヶ谷整形外科",
+        "type": "クリニック",
+        "hourlyWage": 1800,
+        "location": "南阿佐ヶ谷駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 109,
+        "name": "永福町クリニック",
+        "type": "クリニック",
+        "hourlyWage": 1900,
+        "location": "永福町駅周辺",
+        "benefits": ["週2日からOK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-17:30",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 110,
+        "name": "浜田山医院",
+        "type": "クリニック",
+        "hourlyWage": 2050,
+        "location": "浜田山駅周辺",
+        "benefits": ["週2-3日OK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 111,
+        "name": "阿佐ヶ谷東クリニック",
+        "type": "クリニック",
+        "hourlyWage": 1880,
+        "location": "阿佐ヶ谷駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
+      },
+      {
+        "id": 112,
+        "name": "下高井戸クリニック",
+        "type": "クリニック",
+        "hourlyWage": 1920,
+        "location": "下高井戸駅周辺",
+        "benefits": ["週2日からOK", "交通費支給"],
+        "workDays": "月〜金",
+        "workHours": "9:00-18:00",
+        "holiday": "土日祝日"
+      },
+      {
+        "id": 113,
+        "name": "荻窪医療クリニック",
+        "type": "クリニック",
+        "hourlyWage": 2100,
+        "location": "荻窪駅周辺",
+        "benefits": ["週1日からOK", "交通費支給"],
+        "workDays": "応相談",
+        "workHours": "応相談",
+        "holiday": "応相談"
       }
     ]
   },
@@ -240,14 +416,14 @@
   "statistics": {
     "nurses": {
       "fullTime": {
-        "average": 323500,
+        "average": 318500,
         "max": 347000,
         "min": 300000
       },
       "partTime": {
-        "average": 1950,
-        "max": 2000,
-        "min": 1900
+        "average": 1928,
+        "max": 2100,
+        "min": 1800
       }
     },
     "medicalOffice": {
