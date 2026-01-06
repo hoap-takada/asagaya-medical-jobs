@@ -75,7 +75,7 @@ export default function Home() {
           <div className="font-bold text-lg">医療職求人比較レポート</div>
           <div className="flex gap-4">
             <a href="/" className="px-4 py-2 rounded-lg bg-teal-700 hover:bg-teal-600 transition-colors">阿佐ヶ谷版</a>
-            <a href="https://8888-iedriuvm079iiucwxd45d-dd394a40.sg1.manus.computer/machida.html" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 transition-colors">町田版</a>
+            <a href="/machida.html" className="px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 transition-colors">町田版</a>
           </div>
         </div>
       </nav>
@@ -278,7 +278,7 @@ export default function Home() {
         {/* フッター */}
         <div className="mt-12 p-6 bg-teal-50 rounded-lg border border-teal-200 text-center">
           <div className="mb-4 pb-4 border-b border-teal-200">
-            <a href="https://8888-iedriuvm079iiucwxd45d-dd394a40.sg1.manus.computer/machida.html" target="_blank" rel="noopener noreferrer" className="text-teal-700 hover:text-teal-600 font-semibold transition-colors">町田・相模大野版を見る →</a>
+            <a href="/machida.html" className="text-teal-700 hover:text-teal-600 font-semibold transition-colors">町田・相模大野版を見る →</a>
           </div>
           <p className="text-sm text-slate-600">
             このレポートは2026年1月に阿佐ヶ谷エリアの医療職求人情報を調査した結果です。
