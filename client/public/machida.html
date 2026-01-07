@@ -11,55 +11,75 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(to bottom right, #f8fafc, #f1f5f9); color: #1e293b; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+        
+        /* ナビゲーション */
         nav { background: linear-gradient(to right, #fef3c7, #fbcfe8, #e9d5ff); color: #1e293b; padding: 0.75rem 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        nav .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        nav .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         nav .logo { font-weight: bold; font-size: 1.125rem; }
         nav .nav-links { display: flex; gap: 1rem; }
         nav a { padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none; color: white; transition: all 0.3s; }
         nav a.active { background: linear-gradient(to right, #fbbf24, #f97316); }
         nav a.inactive { background: linear-gradient(to right, #a78bfa, #06b6d4); }
         nav a:hover { opacity: 0.9; }
-        header { background: linear-gradient(to right, #fef3c7, #fbcfe8, #e9d5ff); color: #1e293b; padding: 2.5rem 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        header h1 { font-size: 2.25rem; margin-bottom: 0.75rem; }
-        header .subtitle { font-size: 0.875rem; opacity: 0.8; }
-        main { padding: 3rem 1rem; }
+        
+        /* ヘッダー */
+        header { background: linear-gradient(to right, #fef3c7, #fbcfe8, #e9d5ff); color: #1e293b; padding: 2rem 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        header .container { max-width: 1280px; margin: 0 auto; }
+        header h1 { font-size: 2.25rem; margin-bottom: 0.75rem; font-weight: bold; }
+        header .subtitle { font-size: 0.875rem; opacity: 0.8; color: #64748b; }
+        
+        /* メインコンテンツ */
+        main { max-width: 1280px; margin: 0 auto; padding: 3rem 1rem; }
+        
+        /* フィルターセクション */
         .filter-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
         @media (max-width: 768px) { .filter-section { grid-template-columns: 1fr; } }
-        .card { background: white; border: 1px solid #cbd5e1; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07); margin-bottom: 2rem; }
-        .card h2 { font-size: 1.5rem; margin-bottom: 1rem; }
-        .card h3 { font-size: 1.125rem; margin-bottom: 1rem; }
+        
+        /* カード */
+        .card { background: white; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07); margin-bottom: 2rem; }
+        .card h2 { font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; }
+        .card h3 { font-size: 1.125rem; margin-bottom: 1rem; font-weight: 600; }
+        
+        /* ボタン */
         button { width: 100%; padding: 0.75rem 1rem; border: none; border-radius: 0.375rem; cursor: pointer; transition: all 0.3s; margin-bottom: 0.75rem; font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; }
         button.inactive { background: #e2e8f0; color: #475569; }
         button.inactive:hover { background: #cbd5e1; }
-        button.active { background: linear-gradient(to right, #fbbf24, #f97316); color: white; box-shadow: 0 4px 6px rgba(249, 115, 22, 0.2); }
+        button.active { background: #f97316; color: white; box-shadow: 0 4px 6px rgba(249, 115, 22, 0.2); font-weight: 500; }
+        
+        /* 統計ボックス */
         .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-        .stat-box { padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #cbd5e1; }
-        .stat-box.avg { background: linear-gradient(135deg, #fef3c7, #fbbf24); border-color: #f97316; }
-        .stat-box.max { background: linear-gradient(135deg, #fce7f3, #fbcfe8); border-color: #ec4899; }
-        .stat-box.min { background: linear-gradient(135deg, #e9d5ff, #d8b4fe); border-color: #a78bfa; }
-        .stat-label { font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; }
+        .stat-box { padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e2e8f0; }
+        .stat-box.avg { background: linear-gradient(to bottom right, #fef3c7, #fbbf24); border-color: #f97316; }
+        .stat-box.max { background: linear-gradient(to bottom right, #cffafe, #a5f3fc); border-color: #06b6d4; }
+        .stat-box.min { background: linear-gradient(to bottom right, #fce7f3, #fbcfe8); border-color: #ec4899; }
+        .stat-label { font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; font-weight: 500; }
         .stat-value { font-size: 2rem; font-weight: bold; }
         .stat-box.avg .stat-value { color: #f97316; }
-        .stat-box.max .stat-value { color: #ec4899; }
-        .stat-box.min .stat-value { color: #a78bfa; }
+        .stat-box.max .stat-value { color: #06b6d4; }
+        .stat-box.min .stat-value { color: #ec4899; }
+        
+        /* グラフコンテナ */
         .chart-container { position: relative; height: 300px; margin-bottom: 2rem; background: #f8fafc; padding: 1rem; border-radius: 0.5rem; }
+        
+        /* 求人カード */
         .jobs-count { font-size: 0.875rem; color: #64748b; margin-bottom: 1.5rem; }
         .job-item { border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 1.25rem; margin-bottom: 1rem; background: linear-gradient(to right, #ffffff, #f8fafc); transition: all 0.3s; }
         .job-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #f97316; }
         .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
         .job-name { font-size: 1.125rem; font-weight: 600; color: #1e293b; }
         .job-type { font-size: 0.875rem; color: #64748b; }
-        .job-badge { background: linear-gradient(135deg, #fef3c7, #fbbf24); color: #f97316; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600; }
+        .job-badge { background: linear-gradient(to bottom right, #fef3c7, #fbbf24); color: #f97316; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600; }
         .job-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
         .detail-item { display: flex; gap: 0.75rem; }
-        .detail-icon { width: 2rem; height: 2rem; background: linear-gradient(135deg, #fef3c7, #fbbf24); border-radius: 0.375rem; display: flex; align-items: center; justify-content: center; color: #f97316; flex-shrink: 0; font-size: 1rem; }
+        .detail-icon { width: 2rem; height: 2rem; background: linear-gradient(to bottom right, #fef3c7, #fbbf24); border-radius: 0.375rem; display: flex; align-items: center; justify-content: center; color: #f97316; flex-shrink: 0; font-size: 1rem; }
         .detail-content { flex: 1; }
         .detail-label { font-size: 0.75rem; color: #64748b; margin-bottom: 0.25rem; }
         .detail-value { font-weight: 600; color: #1e293b; }
         .benefits { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .benefit-tag { background: linear-gradient(135deg, #cffafe, #a5f3fc); color: #0891b2; border: 1px solid #06b6d4; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.75rem; }
-        footer { background: linear-gradient(135deg, #fef3c7, #fbbf24); border: 1px solid #f97316; border-radius: 0.5rem; padding: 1.5rem; text-align: center; margin-top: 3rem; }
+        .benefit-tag { background: linear-gradient(to bottom right, #cffafe, #a5f3fc); color: #0891b2; border: 1px solid #06b6d4; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.75rem; }
+        
+        /* フッター */
+        footer { background: linear-gradient(to bottom right, #fef3c7, #fbbf24); border: 1px solid #f97316; border-radius: 0.5rem; padding: 1.5rem; text-align: center; margin-top: 3rem; }
         footer p { font-size: 0.875rem; color: #475569; }
         footer .small { font-size: 0.75rem; color: #64748b; margin-top: 0.5rem; }
         footer .nav-link { display: inline-block; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #f97316; }
@@ -85,7 +105,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main>
         <div class="filter-section">
             <div class="card">
                 <h3>職種を選択</h3>
@@ -98,15 +118,15 @@
             <h2 id="statsTitle">時給統計（看護師・パート）</h2>
             <div class="stats">
                 <div class="stat-box avg">
-                    <div class="stat-label">平均時給</div>
+                    <div class="stat-label">平均</div>
                     <div class="stat-value" id="avgWage">¥1,950</div>
                 </div>
                 <div class="stat-box max">
-                    <div class="stat-label">最高時給</div>
+                    <div class="stat-label">最高</div>
                     <div class="stat-value" id="maxWage">¥2,400</div>
                 </div>
                 <div class="stat-box min">
-                    <div class="stat-label">最低時給</div>
+                    <div class="stat-label">最低</div>
                     <div class="stat-value" id="minWage">¥1,700</div>
                 </div>
             </div>
@@ -247,11 +267,11 @@
             chart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['平均時給', '最高時給', '最低時給'],
+                    labels: ['平均', '最高', '最低'],
                     datasets: [{
                         label: '時給（円）',
                         data: [stat.average, stat.max, stat.min],
-                        backgroundColor: ['#f97316', '#ec4899', '#a78bfa'],
+                        backgroundColor: ['#f97316', '#06b6d4', '#ec4899'],
                         borderRadius: 8,
                         borderSkipped: false
                     }]
