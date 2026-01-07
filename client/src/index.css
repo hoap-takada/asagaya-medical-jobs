@@ -47,11 +47,11 @@
   --primary-foreground: oklch(0.98 0.001 0);
   --sidebar-primary: oklch(0.55 0.22 330);
   --sidebar-primary-foreground: oklch(0.98 0.001 0);
-  --chart-1: oklch(0.7 0.15 330);
-  --chart-2: oklch(0.6 0.2 330);
-  --chart-3: oklch(0.55 0.22 330);
-  --chart-4: oklch(0.5 0.2 330);
-  --chart-5: oklch(0.45 0.18 330);
+  --chart-1: #f472b6;
+  --chart-2: #ec4899;
+  --chart-3: #db2777;
+  --chart-4: #be185d;
+  --chart-5: #9d174d;
   --radius: 0.65rem;
   --background: linear-gradient(135deg, oklch(0.98 0.001 0) 0%, oklch(0.95 0.01 180) 100%);
   --foreground: oklch(0.2 0.02 65);

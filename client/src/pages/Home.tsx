@@ -91,7 +91,7 @@ export default function Home() {
       <main className="container max-w-6xl mx-auto py-12 px-4">
         {/* フィルターセクション */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <Card className="border-teal-200">
+          <Card className="border-pink-200">
             <CardHeader>
               <CardTitle className="text-lg">職種を選択</CardTitle>
             </CardHeader>
@@ -102,7 +102,7 @@ export default function Home() {
                   onClick={() => setSelectedJobType(key)}
                   className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
                     selectedJobType === key
-                      ? "bg-teal-600 text-white shadow-md"
+                      ? "bg-pink-600 text-white shadow-md"
                       : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                   }`}
                 >
@@ -112,7 +112,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="border-teal-200">
+          <Card className="border-pink-200">
             <CardHeader>
               <CardTitle className="text-lg">雇用形態を選択</CardTitle>
             </CardHeader>
@@ -121,7 +121,7 @@ export default function Home() {
                 onClick={() => setSelectedEmploymentType("fullTime")}
                 className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
                   selectedEmploymentType === "fullTime"
-                    ? "bg-teal-600 text-white shadow-md"
+                    ? "bg-pink-600 text-white shadow-md"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
@@ -131,7 +131,7 @@ export default function Home() {
                 onClick={() => setSelectedEmploymentType("partTime")}
                 className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
                   selectedEmploymentType === "partTime"
-                    ? "bg-teal-600 text-white shadow-md"
+                    ? "bg-cyan-600 text-white shadow-md"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
@@ -142,27 +142,27 @@ export default function Home() {
         </div>
 
         {/* 統計情報 */}
-        <Card className="mb-8 border-teal-200 bg-white shadow-md">
+        <Card className="mb-8 border-pink-200 bg-white shadow-md">
           <CardHeader>
             <CardTitle>給与統計（{jobTypeLabels[selectedJobType as keyof typeof jobTypeLabels]}・{selectedEmploymentType === "fullTime" ? "正社員" : "パート"}）</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg border border-teal-200">
-                <p className="text-sm text-teal-600 font-semibold mb-2">平均</p>
-                <p className="text-3xl font-bold text-teal-700">
+              <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-lg border border-pink-200">
+                <p className="text-sm text-pink-600 font-semibold mb-2">平均</p>
+                <p className="text-3xl font-bold text-pink-700">
                   {isFullTime ? `¥${(currentStats.average / 10000).toFixed(1)}万` : `¥${currentStats.average}`}
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
-                <p className="text-sm text-green-600 font-semibold mb-2">最高</p>
-                <p className="text-3xl font-bold text-green-700">
+              <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 p-6 rounded-lg border border-cyan-200">
+                <p className="text-sm text-cyan-600 font-semibold mb-2">最高</p>
+                <p className="text-3xl font-bold text-cyan-700">
                   {isFullTime ? `¥${(currentStats.max / 10000).toFixed(1)}万` : `¥${currentStats.max}`}
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200">
-                <p className="text-sm text-orange-600 font-semibold mb-2">最低</p>
-                <p className="text-3xl font-bold text-orange-700">
+              <div className="bg-gradient-to-br from-pink-100 to-pink-200 p-6 rounded-lg border border-pink-300">
+                <p className="text-sm text-pink-700 font-semibold mb-2">最低</p>
+                <p className="text-3xl font-bold text-pink-800">
                   {isFullTime ? `¥${(currentStats.min / 10000).toFixed(1)}万` : `¥${currentStats.min}`}
                 </p>
               </div>
@@ -204,27 +204,27 @@ export default function Home() {
                       <h3 className="text-lg font-semibold text-slate-900">{job.name}</h3>
                       <p className="text-sm text-slate-600">{job.type}</p>
                     </div>
-                    <Badge variant="secondary" className="bg-teal-100 text-teal-700 border-teal-300">
+                    <Badge variant="secondary" className="bg-pink-100 text-pink-700 border-pink-300">
                       {index + 1}/{currentJobs.length}
                     </Badge>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <div className="flex items-center gap-2">
-                      <div className="bg-teal-100 p-2 rounded-lg">
-                        <Heart className="w-5 h-5 text-teal-600" />
+                      <div className="bg-pink-100 p-2 rounded-lg">
+                        <Heart className="w-5 h-5 text-pink-600" />
                       </div>
                       <div>
                         <p className="text-xs text-slate-600">給与</p>
-                        <p className="font-bold text-teal-700">
+                        <p className="font-bold text-pink-700">
                           {isFullTime ? `¥${((job.salary as number) / 10000).toFixed(1)}万/月` : `¥${job.hourlyWage}/時間`}
                         </p>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <div className="bg-teal-100 p-2 rounded-lg">
-                        <MapPin className="w-5 h-5 text-teal-600" />
+                      <div className="bg-cyan-100 p-2 rounded-lg">
+                        <MapPin className="w-5 h-5 text-cyan-600" />
                       </div>
                       <div>
                         <p className="text-xs text-slate-600">勤務地</p>
@@ -233,8 +233,8 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <div className="bg-teal-100 p-2 rounded-lg">
-                        <Clock className="w-5 h-5 text-teal-600" />
+                      <div className="bg-pink-100 p-2 rounded-lg">
+                        <Clock className="w-5 h-5 text-pink-600" />
                       </div>
                       <div>
                         <p className="text-xs text-slate-600">勤務時間</p>
@@ -243,8 +243,8 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <div className="bg-teal-100 p-2 rounded-lg">
-                        <Calendar className="w-5 h-5 text-teal-600" />
+                      <div className="bg-cyan-100 p-2 rounded-lg">
+                        <Calendar className="w-5 h-5 text-cyan-600" />
                       </div>
                       <div>
                         <p className="text-xs text-slate-600">休日</p>
@@ -254,14 +254,14 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-start gap-2">
-                    <div className="bg-teal-100 p-2 rounded-lg mt-0.5">
-                      <Gift className="w-5 h-5 text-teal-600" />
+                    <div className="bg-pink-100 p-2 rounded-lg mt-0.5">
+                      <Gift className="w-5 h-5 text-pink-600" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-xs text-slate-600 mb-2">福利厚生</p>
+                      <p className="text-xs text-slate-600 mb-2">福利厨生</p>
                       <div className="flex flex-wrap gap-2">
                         {job.benefits.map((benefit: string, idx: number) => (
-                          <Badge key={idx} variant="outline" className="bg-green-50 text-green-700 border-green-300">
+                          <Badge key={idx} variant="outline" className="bg-cyan-50 text-cyan-700 border-cyan-300">
                             {benefit}
                           </Badge>
                         ))}
