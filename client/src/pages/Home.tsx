@@ -70,21 +70,20 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* ナビゲーションバー */}
-      <nav className="bg-teal-800 text-white px-4 py-3 shadow-md">
+      <nav className="bg-pink-600 text-white px-4 py-3 shadow-md">
         <div className="container max-w-6xl mx-auto flex justify-between items-center">
           <div className="font-bold text-lg">医療職求人比較レポート</div>
           <div className="flex gap-4">
-            <a href="/" className="px-4 py-2 rounded-lg bg-teal-700 hover:bg-teal-600 transition-colors">阿佐ヶ谷版</a>
-            <a href="/machida.html" className="px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 transition-colors">町田版</a>
+            <a href="/" className="px-4 py-2 rounded-lg bg-pink-700 hover:bg-pink-600 transition-colors">阿佐ヶ谷版</a>
+            <a href="/machida.html" className="px-4 py-2 rounded-lg bg-pink-500 hover:bg-pink-400 transition-colors">町田版</a>
           </div>
         </div>
       </nav>
       {/* ヘッダー */}
-      <header className="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-8 px-4 shadow-lg">
+      <header className="bg-gradient-to-r from-pink-600 to-cyan-400 text-white py-8 px-4 shadow-lg">
         <div className="container max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-3">阿佐ヶ谷 クリニック医療職求人比較レポート</h1>
-          <p className="text-lg text-teal-100">クリニック限定 | 看護師、医療事務、放射線技師の求人条件を徹底比較</p>
-          <p className="text-sm text-teal-200 mt-2">2026年1月調査 | 阿佐ヶ谷エリア | 医療事務は歯科クリニックを含む</p>
+          <h1 className="text-4xl font-bold mb-3">阿佐ヶ谷周辺クリニック医療職求人比較レポート</h1>
+          <p className="text-sm text-teal-200 mt-2">2026年1月調查 | 阿佐ヶ谷周辺エリア</p>
         </div>
       </header>
 
@@ -276,15 +275,15 @@ export default function Home() {
         </Card>
 
         {/* フッター */}
-        <div className="mt-12 p-6 bg-teal-50 rounded-lg border border-teal-200 text-center">
-          <div className="mb-4 pb-4 border-b border-teal-200">
-            <a href="/machida.html" className="text-teal-700 hover:text-teal-600 font-semibold transition-colors">町田・相模大野版を見る →</a>
+        <div className="mt-12 p-6 bg-pink-50 rounded-lg border border-pink-200 text-center">
+          <div className="mb-4 pb-4 border-b border-pink-200">
+            <a href="/machida.html" className="text-pink-600 hover:text-pink-500 font-semibold transition-colors">町田・相模大野版を見る →</a>
           </div>
           <p className="text-sm text-slate-600">
-            このレポートは2026年1月に阿佐ヶ谷エリアの医療職求人情報を調査した結果です。
+            このレポートは株式会社HOAPがリサーチ・作成したものです。
           </p>
-          <p className="text-xs text-slate-500 mt-2">
-            情報は変動する可能性があります。最新情報は各施設にお問い合わせください。
+          <p className="text-xs text-slate-500 mt-2 font-semibold">
+            無断転用及び無断複製を厳禁します。
           </p>
         </div>
       </main>
