@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>町田・相模大野周辺パート時給比較レポート</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            background: linear-gradient(to bottom right, #f8fafc, #f1f5f9); 
+            color: #1e293b;
+            min-height: 100vh;
+        }
+        
+        /* ナビゲーション */
+        nav { 
+            background: linear-gradient(to right, #fef3c7, #fbcfe8, #e9d5ff); 
+            color: #1e293b; 
+            padding: 0.75rem 0; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        nav .nav-container { 
+            max-width: 1280px; 
+            margin: 0 auto; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding-left: 2rem; 
+            padding-right: 2rem; 
+        }
+        nav .logo { 
+            font-weight: bold; 
+            font-size: 1.125rem; 
+        }
+        nav .nav-links { 
+            display: flex; 
+            gap: 1rem; 
+        }
+        nav a { 
+            padding: 0.5rem 1rem; 
+            border-radius: 0.5rem; 
+            text-decoration: none; 
+            color: white; 
+            transition: all 0.3s; 
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+        nav a.active { 
+            background: linear-gradient(to right, #fbbf24, #f97316); 
+        }
+        nav a.inactive { 
+            background: linear-gradient(to right, #a78bfa, #06b6d4); 
+        }
+        nav a:hover { opacity: 0.9; }
+        
+        /* ヘッダー */
+        header { 
+            background: linear-gradient(to right, #fef3c7, #fbcfe8, #e9d5ff); 
+            color: #1e293b; 
+            padding: 2rem 0; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        header .container { 
+            max-width: 1280px; 
+            margin: 0 auto; 
+            padding-left: 2rem; 
+            padding-right: 2rem; 
+        }
+        header h1 { 
+            font-size: 2.25rem; 
+            margin-bottom: 0.75rem; 
+            font-weight: bold; 
+        }
+        header .subtitle { 
+            font-size: 0.875rem; 
+            opacity: 0.8; 
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+        
+        /* メインコンテンツ */
+        main { 
+            max-width: 1280px; 
+            margin: 0 auto; 
+            padding: 3rem 2rem;
+        }
+        
+        /* フィルターセクション */
+        .filter-section { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 1.5rem; 
+            margin-bottom: 2rem; 
+        }
+        @media (max-width: 768px) { 
+            .filter-section { 
+                grid-template-columns: 1fr; 
+            } 
+        }
+        
+        /* カード */
+        .card { 
+            background: white; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 0.5rem; 
+            padding: 1.5rem; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07); 
+            margin-bottom: 2rem;
+        }
+        .card.border-pink { border-color: #fbcfe8; }
+        .card h2 { 
+            font-size: 1.5rem; 
+            margin-bottom: 1rem; 
+            font-weight: 600; 
+        }
+        .card h3 { 
+            font-size: 1.125rem; 
+            margin-bottom: 1rem; 
+            font-weight: 600; 
+        }
+        
+        /* ボタン */
+        button { 
+            width: 100%; 
+            padding: 0.75rem 1rem; 
+            border: none; 
+            border-radius: 0.5rem; 
+            cursor: pointer; 
+            transition: all 0.3s; 
+            margin-bottom: 0.75rem; 
+            font-family: 'Noto Sans JP', sans-serif; 
+            font-size: 1rem;
+            text-align: left;
+        }
+        button.inactive { 
+            background: #f1f5f9; 
+            color: #475569; 
+        }
+        button.inactive:hover { 
+            background: #e2e8f0; 
+        }
+        button.active { 
+            background: #ec4899; 
+            color: white; 
+            box-shadow: 0 4px 6px rgba(236, 72, 153, 0.2); 
+            font-weight: 500;
+        }
+        
+        /* 統計ボックス */
+        .stats { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1.5rem; 
+            margin-bottom: 2rem; 
+        }
+        .stat-box { 
+            padding: 1.5rem; 
+            border-radius: 0.5rem; 
+            border: 1px solid #e2e8f0;
+        }
+        .stat-box.avg { 
+            background: linear-gradient(to bottom right, #fdf2f8, #fce7f3); 
+            border-color: #fbcfe8;
+        }
+        .stat-box.max { 
+            background: linear-gradient(to bottom right, #cffafe, #a5f3fc); 
+            border-color: #a5f3fc;
+        }
+        .stat-box.min { 
+            background: linear-gradient(to bottom right, #fdf2f8, #fce7f3); 
+            border-color: #fbcfe8;
+        }
+        .stat-label { 
+            font-size: 0.875rem; 
+            color: #64748b; 
+            margin-bottom: 0.5rem; 
+            font-weight: 600;
+        }
+        .stat-value { 
+            font-size: 1.875rem; 
+            font-weight: bold; 
+        }
+        .stat-box.avg .stat-value { color: #ec4899; }
+        .stat-box.max .stat-value { color: #06b6d4; }
+        .stat-box.min .stat-value { color: #ec4899; }
+        
+        /* グラフコンテナ */
+        .chart-container { 
+            position: relative; 
+            height: 300px; 
+            margin-bottom: 2rem; 
+            background: #f1f5f9; 
+            padding: 1.5rem; 
+            border-radius: 0.5rem;
+        }
+        
+        /* 求人カード */
+        .jobs-count { 
+            font-size: 0.875rem; 
+            color: #64748b; 
+            margin-bottom: 1.5rem; 
+        }
+        .job-item { 
+            border: 1px solid #e2e8f0; 
+            border-radius: 0.5rem; 
+            padding: 1.25rem; 
+            margin-bottom: 1rem; 
+            background: linear-gradient(to right, #ffffff, #f8fafc); 
+            transition: all 0.3s; 
+        }
+        .job-item:hover { 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            border-color: #7dd3c0; 
+        }
+        .job-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start; 
+            margin-bottom: 1rem; 
+        }
+        .job-name { 
+            font-size: 1.125rem; 
+            font-weight: 600; 
+            color: #1e293b; 
+        }
+        .job-type { 
+            font-size: 0.875rem; 
+            color: #64748b; 
+        }
+        .job-badge { 
+            background: #fce7f3; 
+            color: #ec4899; 
+            padding: 0.25rem 0.75rem; 
+            border-radius: 0.25rem; 
+            font-size: 0.75rem; 
+            font-weight: 600; 
+        }
+        .job-details { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 1rem; 
+            margin-bottom: 1rem; 
+        }
+        .detail-item { 
+            display: flex; 
+            gap: 0.75rem; 
+        }
+        .detail-icon { 
+            width: 2rem; 
+            height: 2rem; 
+            background: #fce7f3; 
+            border-radius: 0.375rem; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #ec4899; 
+            flex-shrink: 0; 
+            font-size: 1rem; 
+        }
+        .detail-content { 
+            flex: 1; 
+        }
+        .detail-label { 
+            font-size: 0.75rem; 
+            color: #64748b; 
+            margin-bottom: 0.25rem; 
+        }
+        .detail-value { 
+            font-weight: 600; 
+            color: #1e293b; 
+        }
+        .benefits { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 0.5rem; 
+            margin-top: 1rem; 
+        }
+        .benefit-tag { 
+            background: #cffafe; 
+            color: #0891b2; 
+            border: 1px solid #06b6d4; 
+            padding: 0.25rem 0.75rem; 
+            border-radius: 0.25rem; 
+            font-size: 0.75rem; 
+        }
+        
+        /* フッター */
+        footer { 
+            background: #fce7f3; 
+            border: 1px solid #fbcfe8; 
+            border-radius: 0.5rem; 
+            padding: 1.5rem; 
+            text-align: center; 
+            margin-top: 3rem;
+        }
+        footer p { 
+            font-size: 0.875rem; 
+            color: #475569; 
+        }
+        footer .small { 
+            font-size: 0.75rem; 
+            color: #64748b; 
+            margin-top: 0.5rem; 
+        }
+        footer .nav-link { 
+            display: inline-block; 
+            margin-bottom: 1rem; 
+            padding-bottom: 1rem; 
+            border-bottom: 1px solid #fbcfe8; 
+        }
+        footer a { 
+            color: #ec4899; 
+            text-decoration: none; 
+            font-weight: 600; 
+        }
+        footer a:hover { 
+            color: #db2777; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">医療職求人比較レポート</div>
+            <div class="nav-links">
+                <a href="/" class="inactive">阿佐ヶ谷版</a>
+                <a href="/machida.html" class="active">町田版</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>町田・相模大野周辺パート時給比較レポート</h1>
+            <p class="subtitle">2026年1月調査 | 町田・相模大野周辺エリア</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="filter-section">
+            <div class="card border-pink">
+                <h3>職種を選択</h3>
+                <button class="active" onclick="selectJobType('nurses')">看護師</button>
+                <button class="inactive" onclick="selectJobType('medicalOffice')">医療事務</button>
+            </div>
+        </div>
+
+        <div class="card border-pink">
+            <h2 id="statsTitle">時給統計（看護師・パート）</h2>
+            <div class="stats">
+                <div class="stat-box avg">
+                    <div class="stat-label">平均</div>
+                    <div class="stat-value" id="avgWage">¥1,950</div>
+                </div>
+                <div class="stat-box max">
+                    <div class="stat-label">最高</div>
+                    <div class="stat-value" id="maxWage">¥2,400</div>
+                </div>
+                <div class="stat-box min">
+                    <div class="stat-label">最低</div>
+                    <div class="stat-value" id="minWage">¥1,700</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="wageChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card border-pink">
+            <h2>求人詳細情報</h2>
+            <div class="jobs-count"><span id="jobCount">10</span>件の求人</div>
+            <div id="jobsList"></div>
+        </div>
+
+        <footer>
+            <div class="nav-link">
+                <a href="/">阿佐ヶ谷版を見る →</a>
+            </div>
+            <p>このレポートは株式会社HOAPがリサーチ・作成したものです。</p>
+            <p class="small" style="font-weight: bold;">無断転用及び無断複製を厳禁します。</p>
+        </footer>
+    </main>
+
+    <script>
+        const jobData = {
+            "nurses": [
+                { "id": 1, "name": "相模大野駅前クリニック", "type": "クリニック", "hourlyWage": 1900, "location": "相模大野駅徒歩1分", "benefits": ["交通費支給", "週1日からOK", "未経験可"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 2, "name": "相模大野皮膚科クリニック", "type": "クリニック", "hourlyWage": 1900, "location": "相模大野駅周辺", "benefits": ["交通費支給", "週2-3日OK"], "workHours": "9:00-18:00", "holiday": "土日祝日" },
+                { "id": 3, "name": "相模大野病院", "type": "病院", "hourlyWage": 1700, "location": "相模大野駅目の前", "benefits": ["交通費支給", "充実の研修"], "workHours": "8:00-17:00", "holiday": "土日祝日" },
+                { "id": 4, "name": "訪問看護ステーション相模", "type": "訪問看護", "hourlyWage": 2300, "location": "相模大野駅周辺", "benefits": ["交通費全額支給", "週1日からOK"], "workHours": "応相談", "holiday": "応相談" },
+                { "id": 5, "name": "町田駅前総合クリニック", "type": "クリニック", "hourlyWage": 1800, "location": "町田駅徒歩2分", "benefits": ["交通費支給", "週2日からOK"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 6, "name": "川村クリニック", "type": "クリニック", "hourlyWage": 1750, "location": "町田駅周辺", "benefits": ["交通費支給", "週3日OK"], "workHours": "9:00-18:00", "holiday": "土日祝日" },
+                { "id": 7, "name": "町田健診センター", "type": "健診施設", "hourlyWage": 2000, "location": "町田駅周辺", "benefits": ["交通費支給", "週1日からOK"], "workHours": "8:00-17:00", "holiday": "土日祝日" },
+                { "id": 8, "name": "相模原市南区クリニック", "type": "クリニック", "hourlyWage": 1850, "location": "相模大野駅周辺", "benefits": ["交通費支給", "週2日からOK"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 9, "name": "町田市民病院", "type": "病院", "hourlyWage": 1800, "location": "町田駅周辺", "benefits": ["交通費支給", "社会保険完備"], "workHours": "8:00-17:00", "holiday": "土日祝日" },
+                { "id": 10, "name": "相模原訪問看護ステーション", "type": "訪問看護", "hourlyWage": 2400, "location": "相模大野駅周辺", "benefits": ["交通費全額支給", "週1日からOK"], "workHours": "応相談", "holiday": "応相談" }
+            ],
+            "medicalOffice": [
+                { "id": 101, "name": "おだぎりクリニック", "type": "クリニック", "hourlyWage": 1500, "location": "町田駅周辺", "benefits": ["交通費支給", "未経験可"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 102, "name": "いのうえ内科クリニック", "type": "クリニック", "hourlyWage": 1400, "location": "町田駅周辺", "benefits": ["交通費支給", "週1日からOK"], "workHours": "9:00-18:00", "holiday": "土日祝日" },
+                { "id": 103, "name": "こんどう整形外科", "type": "クリニック", "hourlyWage": 1550, "location": "町田駅周辺", "benefits": ["交通費支給", "経験者優遇"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 104, "name": "やすおか医院", "type": "クリニック", "hourlyWage": 1450, "location": "町田駅周辺", "benefits": ["交通費支給", "未経験可"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 105, "name": "なかの整形外科・内科", "type": "クリニック", "hourlyWage": 1600, "location": "町田駅周辺", "benefits": ["交通費支給", "経験者優遇"], "workHours": "9:00-18:00", "holiday": "土日祝日" },
+                { "id": 106, "name": "南町田きたの皮フ科", "type": "クリニック", "hourlyWage": 1500, "location": "南町田駅周辺", "benefits": ["交通費支給", "未経験可"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 107, "name": "たまさかい皮フ科クリニック", "type": "クリニック", "hourlyWage": 1550, "location": "町田駅周辺", "benefits": ["交通費支給", "週2日からOK"], "workHours": "9:00-18:00", "holiday": "土日祝日" },
+                { "id": 108, "name": "南町田レディースクリニック", "type": "クリニック", "hourlyWage": 1500, "location": "南町田駅周辺", "benefits": ["交通費支給", "未経験可"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 109, "name": "相模大野駅前医療事務センター", "type": "クリニック", "hourlyWage": 1700, "location": "相模大野駅徒歩1分", "benefits": ["交通費支給", "経験者優遇"], "workHours": "9:00-17:30", "holiday": "土日祝日" },
+                { "id": 110, "name": "町田市民病院事務部", "type": "病院", "hourlyWage": 1450, "location": "町田駅周辺", "benefits": ["交通費支給", "社会保険完備"], "workHours": "8:00-17:00", "holiday": "土日祝日" }
+            ]
+        };
+
+        const stats = {
+            "nurses": { "average": 1950, "max": 2400, "min": 1700 },
+            "medicalOffice": { "average": 1525, "max": 1700, "min": 1400 }
+        };
+
+        const jobTypeLabels = { "nurses": "看護師", "medicalOffice": "医療事務" };
+        let currentJobType = "nurses";
+        let chart = null;
+
+        function selectJobType(type) {
+            currentJobType = type;
+            document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            const jobs = jobData[currentJobType];
+            const stat = stats[currentJobType];
+            const label = jobTypeLabels[currentJobType];
+
+            document.getElementById('statsTitle').textContent = `時給統計（${label}・パート）`;
+            document.getElementById('avgWage').textContent = `¥${stat.average.toLocaleString()}`;
+            document.getElementById('maxWage').textContent = `¥${stat.max.toLocaleString()}`;
+            document.getElementById('minWage').textContent = `¥${stat.min.toLocaleString()}`;
+            document.getElementById('jobCount').textContent = jobs.length;
+
+            updateChart(stat);
+
+            let html = '';
+            jobs.forEach((job, index) => {
+                html += `
+                    <div class="job-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-name">${job.name}</div>
+                                <div class="job-type">${job.type}</div>
+                            </div>
+                            <span class="job-badge">${index + 1}/${jobs.length}</span>
+                        </div>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">💰</div>
+                                <div class="detail-content">
+                                    <div class="detail-label">時給</div>
+                                    <div class="detail-value">¥${job.hourlyWage}/時間</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">📍</div>
+                                <div class="detail-content">
+                                    <div class="detail-label">勤務地</div>
+                                    <div class="detail-value">${job.location}</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">⏰</div>
+                                <div class="detail-content">
+                                    <div class="detail-label">勤務時間</div>
+                                    <div class="detail-value">${job.workHours}</div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">📅</div>
+                                <div class="detail-content">
+                                    <div class="detail-label">休日</div>
+                                    <div class="detail-value">${job.holiday}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="benefits">
+                            ${job.benefits.map(benefit => `<span class="benefit-tag">${benefit}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            document.getElementById('jobsList').innerHTML = html;
+        }
+
+        function updateChart(stat) {
+            const ctx = document.getElementById('wageChart').getContext('2d');
+            
+            if (chart) {
+                chart.destroy();
+            }
+
+            chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['平均', '最高', '最低'],
+                    datasets: [{
+                        label: '時給（円）',
+                        data: [stat.average, stat.max, stat.min],
+                        backgroundColor: ['#f97316', '#f97316', '#f97316'],
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 3000
+                        }
+                    }
+                }
+            });
+        }
+
+        // 初期表示
+        updateDisplay();
+    </script>
+</body>
+</html>
