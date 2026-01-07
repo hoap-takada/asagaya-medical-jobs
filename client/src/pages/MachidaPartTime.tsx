@@ -63,8 +63,8 @@ export default function MachidaPartTime() {
       {/* ヘッダー */}
       <header className="bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100 text-slate-800 py-8 px-4 shadow-lg">
         <div className="container max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-3">多摩地域 パート時給比較レポート</h1>
-          <p className="text-sm text-slate-600 mt-2">2026年1月調査 | 町田・相模大野・八王子・立川・日野エリア | パート・アルバイト限定</p>
+          <h1 className="text-4xl font-bold mb-3">町田・相模大野周辺パート時給比較レポート</h1>
+          <p className="text-sm text-slate-600 mt-2">2026年1月調査 | 町田・相模大野周辺エリア | パート・アルバイト限定</p>
         </div>
       </header>
 
@@ -98,7 +98,7 @@ export default function MachidaPartTime() {
               <CardTitle className="text-lg">雇用形態</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <div className="w-full text-left px-4 py-3 rounded-lg bg-cyan-600 text-white shadow-md">
+              <div className="w-full text-left px-4 py-3 rounded-lg bg-pink-600 text-white shadow-md">
                 パート・アルバイト
               </div>
             </CardContent>
