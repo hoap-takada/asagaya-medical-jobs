@@ -70,20 +70,20 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* ナビゲーションバー */}
-      <nav className="bg-pink-600 text-white px-4 py-3 shadow-md">
+      <nav className="bg-pink-300 text-slate-800 px-4 py-3 shadow-md">
         <div className="container max-w-6xl mx-auto flex justify-between items-center">
           <div className="font-bold text-lg">医療職求人比較レポート</div>
           <div className="flex gap-4">
-            <a href="/" className="px-4 py-2 rounded-lg bg-pink-700 hover:bg-pink-600 transition-colors">阿佐ヶ谷版</a>
-            <a href="/machida.html" className="px-4 py-2 rounded-lg bg-pink-500 hover:bg-pink-400 transition-colors">町田版</a>
+            <a href="/" className="px-4 py-2 rounded-lg bg-pink-400 hover:bg-pink-500 transition-colors text-white">阿佐ヶ谷版</a>
+            <a href="/machida.html" className="px-4 py-2 rounded-lg bg-cyan-400 hover:bg-cyan-500 transition-colors text-white">町田版</a>
           </div>
         </div>
       </nav>
       {/* ヘッダー */}
-      <header className="bg-gradient-to-r from-pink-600 to-cyan-400 text-white py-8 px-4 shadow-lg">
+      <header className="bg-gradient-to-r from-pink-200 to-cyan-200 text-slate-800 py-8 px-4 shadow-lg">
         <div className="container max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold mb-3">阿佐ヶ谷周辺クリニック医療職求人比較レポート</h1>
-          <p className="text-sm text-teal-200 mt-2">2026年1月調查 | 阿佐ヶ谷周辺エリア</p>
+          <p className="text-sm text-slate-600 mt-2">2026年1月調查 | 阿佐ヶ谷周辺エリア</p>
         </div>
       </header>
 
