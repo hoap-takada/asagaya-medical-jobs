@@ -11,15 +11,15 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(to bottom right, #f8fafc, #f1f5f9); color: #1e293b; }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
-        nav { background: #f8d7e8; color: #1e293b; padding: 0.75rem 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        nav { background: linear-gradient(to right, #fef3c7, #fbcfe8, #e9d5ff); color: #1e293b; padding: 0.75rem 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         nav .nav-container { display: flex; justify-content: space-between; align-items: center; }
         nav .logo { font-weight: bold; font-size: 1.125rem; }
         nav .nav-links { display: flex; gap: 1rem; }
         nav a { padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none; color: white; transition: all 0.3s; }
-        nav a.active { background: #f472b6; }
-        nav a.inactive { background: #06b6d4; }
+        nav a.active { background: linear-gradient(to right, #fbbf24, #f97316); }
+        nav a.inactive { background: linear-gradient(to right, #a78bfa, #06b6d4); }
         nav a:hover { opacity: 0.9; }
-        header { background: linear-gradient(to right, #fbcfe8, #cffafe); color: #1e293b; padding: 2.5rem 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        header { background: linear-gradient(to right, #fef3c7, #fbcfe8, #e9d5ff); color: #1e293b; padding: 2.5rem 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
         header h1 { font-size: 2.25rem; margin-bottom: 0.75rem; text-align: center; }
         header .subtitle { text-align: center; }
         header p { font-size: 1.125rem; opacity: 0.9; margin-bottom: 0.5rem; }
@@ -32,17 +32,17 @@
         button { width: 100%; padding: 0.75rem 1rem; border: none; border-radius: 0.375rem; cursor: pointer; transition: all 0.3s; margin-bottom: 0.75rem; font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; }
         button.inactive { background: #e2e8f0; color: #475569; }
         button.inactive:hover { background: #cbd5e1; }
-        button.active { background: #f472b6; color: white; box-shadow: 0 4px 6px rgba(244, 114, 182, 0.2); }
+        button.active { background: linear-gradient(to right, #fbbf24, #f97316); color: white; box-shadow: 0 4px 6px rgba(249, 115, 22, 0.2); }
         .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
         .stat-box { padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #cbd5e1; }
-        .stat-box.avg { background: linear-gradient(135deg, #fce7f3, #fbcfe8); border-color: #f472b6; }
-        .stat-box.max { background: linear-gradient(135deg, #cffafe, #a5f3fc); border-color: #06b6d4; }
-        .stat-box.min { background: linear-gradient(135deg, #fce7f3, #fbcfe8); border-color: #f472b6; }
+        .stat-box.avg { background: linear-gradient(135deg, #fef3c7, #fbbf24); border-color: #f97316; }
+        .stat-box.max { background: linear-gradient(135deg, #fce7f3, #fbcfe8); border-color: #ec4899; }
+        .stat-box.min { background: linear-gradient(135deg, #e9d5ff, #d8b4fe); border-color: #a78bfa; }
         .stat-label { font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; }
         .stat-value { font-size: 2rem; font-weight: bold; }
-        .stat-box.avg .stat-value { color: #ec4899; }
-        .stat-box.max .stat-value { color: #06b6d4; }
-        .stat-box.min .stat-value { color: #db2777; }
+        .stat-box.avg .stat-value { color: #f97316; }
+        .stat-box.max .stat-value { color: #ec4899; }
+        .stat-box.min .stat-value { color: #a78bfa; }
         .jobs-section h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
         .jobs-count { font-size: 0.875rem; color: #64748b; margin-bottom: 1.5rem; }
         .job-item { border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 1.25rem; margin-bottom: 1rem; background: linear-gradient(to right, #ffffff, #f8fafc); transition: all 0.3s; }

@@ -43,15 +43,15 @@
 }
 
 :root {
-  --primary: oklch(0.6 0.2 330);
+  --primary: #f97316;
   --primary-foreground: oklch(0.98 0.001 0);
-  --sidebar-primary: oklch(0.55 0.22 330);
+  --sidebar-primary: #f97316;
   --sidebar-primary-foreground: oklch(0.98 0.001 0);
-  --chart-1: #f472b6;
-  --chart-2: #ec4899;
-  --chart-3: #db2777;
-  --chart-4: #be185d;
-  --chart-5: #9d174d;
+  --chart-1: #fbbf24;
+  --chart-2: #f97316;
+  --chart-3: #ec4899;
+  --chart-4: #8b5cf6;
+  --chart-5: #06b6d4;
   --radius: 0.65rem;
   --background: linear-gradient(135deg, oklch(0.98 0.001 0) 0%, oklch(0.95 0.01 180) 100%);
   --foreground: oklch(0.2 0.02 65);

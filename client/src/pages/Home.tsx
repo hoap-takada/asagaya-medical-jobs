@@ -70,17 +70,17 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* ナビゲーションバー */}
-      <nav className="bg-pink-300 text-slate-800 px-4 py-3 shadow-md">
+      <nav className="bg-gradient-to-r from-yellow-200 via-pink-200 to-purple-200 text-slate-800 px-4 py-3 shadow-md">
         <div className="container max-w-6xl mx-auto flex justify-between items-center">
           <div className="font-bold text-lg">医療職求人比較レポート</div>
           <div className="flex gap-4">
-            <a href="/" className="px-4 py-2 rounded-lg bg-pink-400 hover:bg-pink-500 transition-colors text-white">阿佐ヶ谷版</a>
-            <a href="/machida.html" className="px-4 py-2 rounded-lg bg-cyan-400 hover:bg-cyan-500 transition-colors text-white">町田版</a>
+            <a href="/" className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-300 to-orange-300 hover:from-yellow-400 hover:to-orange-400 transition-colors text-white font-medium">阿佐ヶ谷版</a>
+            <a href="/machida.html" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-300 to-cyan-300 hover:from-purple-400 hover:to-cyan-400 transition-colors text-white font-medium">町田版</a>
           </div>
         </div>
       </nav>
       {/* ヘッダー */}
-      <header className="bg-gradient-to-r from-pink-200 to-cyan-200 text-slate-800 py-8 px-4 shadow-lg">
+      <header className="bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100 text-slate-800 py-8 px-4 shadow-lg">
         <div className="container max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold mb-3">阿佐ヶ谷周辺クリニック医療職求人比較レポート</h1>
           <p className="text-sm text-slate-600 mt-2">2026年1月調查 | 阿佐ヶ谷周辺エリア</p>
@@ -179,7 +179,7 @@ export default function Home() {
                     formatter={(value) => isFullTime ? `¥${((value as number) / 10000).toFixed(1)}万` : `¥${value}`}
                     contentStyle={{ backgroundColor: "#f1f5f9", border: "1px solid #cbd5e1" }}
                   />
-                  <Bar dataKey="value" fill="#0d7c7c" radius={[8, 8, 0, 0]} />
+                  <Bar dataKey="value" fill="#f97316" radius={[8, 8, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -187,7 +187,7 @@ export default function Home() {
         </Card>
 
         {/* 求人一覧 */}
-        <Card className="border-teal-200 bg-white shadow-md">
+        <Card className="border-pink-200 bg-white shadow-md">
           <CardHeader>
             <CardTitle>求人詳細情報</CardTitle>
             <CardDescription>{currentJobs.length}件の求人</CardDescription>
